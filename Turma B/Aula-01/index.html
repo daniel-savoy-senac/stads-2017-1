@@ -24,7 +24,8 @@
 
       function pintar(){
         var tela = document.body;
-        tela.style.background = "red";
+        var r = ~~(Math.random() * 255)
+        tela.style.background = "rgb(255,127,0)";
       }
 
       window.addEventListener("click",pintar);
