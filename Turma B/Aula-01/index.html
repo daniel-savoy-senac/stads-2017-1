@@ -24,8 +24,10 @@
 
       function pintar(){
         var tela = document.body;
-        var r = ~~(Math.random() * 255)
-        tela.style.background = "rgb(255,127,0)";
+        var r = ~~(Math.random() * 255);
+        var g = ~~(Math.random() * 255);
+        var b = ~~(Math.random() * 255);
+        tela.style.background = "rgb("+r+","+g+","+b+")";
       }
 
       window.addEventListener("click",pintar);
