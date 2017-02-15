@@ -4,7 +4,7 @@
     <!-- Título -->
     <title>Aula 01</title>
     <style type="text/css">
-    p:nth-of-type(2){
+    p:nth-of-type(1){
       background: red;
     }
 
@@ -20,11 +20,17 @@
     <h1>Elefante</h1>
     <h2>O maior animal da floresta</h2>
     <p>Elefante é o termo genérico e popular pelo qual são denominados os membros da família <i>Elephantidae</i>, um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta sp.) e uma asiática (Elephas sp.).</p>
+    <script type="text/javascript">
 
-    <p>Há ainda os mamutes (Mammuthus sp.), hoje extintos. Até recentemente, acreditava-se que havia apenas duas espécies vivas de elefantes, o elefante-africano e o elefante-asiático, uma espécie menor.</p>
+      function pintar(){
+        var tela = document.body;
+        tela.style.background = "red";
+      }
 
-    <p>Entretanto, estudos recentes de DNA sugerem que havia, na verdade, duas espécies de elefante-africano: Loxodonta africana, da savana, e Loxodonta cyclotis, que vive nas florestas. Os elefantes são os maiores animais terrestres da actualidade, com a massa entre 4 a 6 toneladas e medindo em média quatro metros de altura, podem levantar até 10.000 kg.</p>
+      window.addEventListener("click",pintar);
 
-    <p>As suas características mais distintivas são as presas de marfim.</p>
+
+
+    </script>
   </body>
 </html>
