@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Aula 1 - Intro</title>
+		
+		<style type="text/css">
+			h1:first-of-type{
+				color: blue;
+			}
+			
+			h1{
+				color:red;
+				text-transform: uppercase;
+			}
+		</style>
+		
+		
+	</head>
+	<body>
+		<h1>Introdução</h1>
+		<p>O termo girafa (do árabe zarAfa(t), pelo italiano giraffa) é a designação dada a mamíferos artiodátilos, ruminantes, do gênero Giraffa, da família dos girafídeos.</p>
+		<h1>sobre a girafa</h1>
+		<p>No qual constam quatro espécies (até 2016 considerava-se uma única espécie, a Giraffa camelopardalis, ou camelo-leopardo, como eram chamadas pelos romanos quando elas existiam no norte da <a href="https://pt.wikipedia.org/wiki/%C3%81frica">África</a>, pois acreditava-se que vinham de uma mistura de uma fêmea camelo, com um macho leopardo)[carece de fontes].</p> 
+		
+		<p>São ungulados com número par de dedos.</p>
+			
+		<script type="text/javascript">
+			var titulo = document.querySelector("h1:first-of-type");
+				
+			
+			function mouse(evt){
+				//console.log(evt);
+				
+				var x = evt.x;
+				var w = window.innerWidth;
+				var red = ( x / w ) * 255;
+				
+				var int_red = ~~red;
+			
+				//titulo.style.color = "rgb("+int_red+",0,0)";
+				titulo.style.color = "hsl(30,100%,50%)";
+			}
+			
+			window.addEventListener("mousemove",mouse);
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
+
+
