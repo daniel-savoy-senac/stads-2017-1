@@ -22,15 +22,19 @@
     <p>Elefante é o termo genérico e popular pelo qual são denominados os membros da família <i>Elephantidae</i>, um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no mundo atual, duas africanas (Loxodonta sp.) e uma asiática (Elephas sp.).</p>
     <script type="text/javascript">
 
-      function pintar(){
+      function pintar(evt){
+        var x = evt.x;
+        var w = window.innerWidth;
         var tela = document.body;
-        var r = ~~(Math.random() * 255);
-        var g = ~~(Math.random() * 255);
-        var b = ~~(Math.random() * 255);
+        var r = ~~(x/w * 255);
+        var g = 0;
+        var b = 0;
         tela.style.background = "rgb("+r+","+g+","+b+")";
+
+        //hsl(0,0%,0%);
       }
 
-      window.addEventListener("click",pintar);
+      window.addEventListener("mousemove",pintar);
 
 
 
