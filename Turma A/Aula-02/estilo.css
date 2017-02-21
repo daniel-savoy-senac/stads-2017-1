@@ -9,6 +9,10 @@ p{
   margin: 0px;
 }
 
+p:nth-of-type(2){
+  background: hsl(120,100%,50%);
+}
+
 section{
     background: hsl(240,100%,50%);
     width: 70%;

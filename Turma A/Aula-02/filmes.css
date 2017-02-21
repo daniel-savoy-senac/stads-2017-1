@@ -1,0 +1,23 @@
+article{
+  width: 250px;
+  border: 2px solid hsl(120,100%,30%);
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 1s;
+  /*float: left;*/
+  display: inline-block;
+}
+
+.comedia:hover{
+  background: hsl(60,100%,50%);
+  transform: rotate(45deg);
+}
+
+#um-morto-muito-louco-2 img{}
+
+
+
+.comedia{
+  background: hsl(30,100%,50%);
+}
