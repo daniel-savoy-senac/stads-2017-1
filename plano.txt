@@ -1,0 +1,99 @@
+1a semana
+Apresentação da disciplina, metodologia e ferramentas de avaliação.
+Conceitos: marcação de texto com HTML, formatação via estilos CSS, e interação com JS.
+ADO: Exercício Inicial
+
+
+2a semana
+Conceitos: seletores CSS e posicionamento de elementos.
+Experimentação em sala.
+ADO: Exercício com seletores CSS
+
+
+3a semana
+Conceitos: diagramação via CSS.
+Experimentação em aula.
+ADO: Exercício de diagramação CSS
+
+
+4a semana
+Conceitos: Javascript, sintaxe e ambiente de depuração
+Experimentação em aula.
+ADO: Exercício JS
+
+
+5a semana
+Conceitos: Formulários HTML.
+Experimentação em aula.
+ADO: Exercício formulário HTML
+
+
+6a semana
+Conceitos: DOM e o Javascript.
+Experimentação em aula.
+ADO: Exercício DOM
+
+
+7a semana
+Revisão dos conteúdos.
+ADO: Resumo do aluno
+
+
+8a semana
+Prova 1 (P1)
+
+
+9a semana
+Conceitos: Eventos e Observadores
+Experimentação em aula
+ADO: Exercício com eventos
+
+
+10a semana
+Conceitos: JSON e serialização
+Experimentação em aula
+ADO: Exercício JSON
+
+
+11a semana
+Conceitos: Servlets, JSP, JSTL e EL.
+Experimentação em aula.
+ADO: Exercício JSP e JSTL
+
+
+12a semana
+Conceitos: XHR, comunicação síncrona e assíncrona.
+Experimentação em aula.
+ADO: Exercício XHR
+
+
+13a semana
+Conceitos: Tópicos Avançados
+Experimentação em aula.
+ADO: Exercício Tópicos 1
+
+
+14a semana
+Conceitos: Tópicos Avançados
+Experimentação em aula.
+ADO: Exercício Tópicos 2
+
+
+15a semana
+Conceitos: Tópicos Avançados
+Experimentação em aula.
+ADO: Exercício Tópicos 3
+
+
+16a semana
+Revisão final dos assuntos abordados no semestre.
+ADO: Resumo final do aluno
+
+
+17a semana
+Prova 2 (P2)
+
+
+18a semana
+Devolutiva do semestre.
+Prova para Ausentes (PA)

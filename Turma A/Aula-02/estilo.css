@@ -1,0 +1,20 @@
+body{
+  background: hsl(0,100%,50%);
+}
+
+p{
+  background: hsl(0,0%,0%);
+  height: 50px;
+  width: 300px;
+  margin: 0px;
+}
+
+p:nth-of-type(2){
+  background: hsl(120,100%,50%);
+}
+
+section{
+    background: hsl(240,100%,50%);
+    width: 70%;
+    padding: 30px;
+}
