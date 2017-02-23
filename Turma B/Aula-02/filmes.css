@@ -4,11 +4,15 @@ body{
 
 #alien-4{
   background-image: url("https://images-na.ssl-images-amazon.com/images/M/MV5BM2YxYmFjYWMtMzBmMC00MTVmLThhMjUtYWU5Yzg2OGQwZjE3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg");
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  background-size: auto 200px;
+  padding-top: 200px;
 }
 
 article{
   border: 2px hsl(0,100%,30%) solid;
-  width: 250px;
+  width: 220px;
   padding: 20px;
   text-align: center;
   background: hsl(0,100%,70%);
