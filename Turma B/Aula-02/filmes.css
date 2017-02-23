@@ -1,3 +1,15 @@
 body{
   background: hsl(240, 0%, 50%);
 }
+
+article{
+  border: 2px hsl(0,100%,30%) solid;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+article p:first-of-type{
+  color: hsl(0,100%,30%);
+  font-size: 20px;
+}
