@@ -1,11 +1,19 @@
+html,body{
+  padding: 0px; margin: 0px; height: 100%;
+}
 div{
-  background: hsl(240,100%,50%);
+  background: hsla(240,0%,0%,0.2);
   color: white;
-  margin: 25px;
 }
-#caixa01{
-  display: inline;
+#avo{
+  width: 600px;
+  height: 600px;
 }
-#caixa02{
-  display: none;
+#pai{
+  width: 400px;
+  height: 400px;
+}
+#filho{
+  width: 50px;
+  height: 50px;
 }
