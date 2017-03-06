@@ -1,0 +1,11 @@
+div{
+  background: hsl(240,100%,50%);
+  color: white;
+  margin: 25px;
+}
+#caixa01{
+  display: inline;
+}
+#caixa02{
+  display: none;
+}
