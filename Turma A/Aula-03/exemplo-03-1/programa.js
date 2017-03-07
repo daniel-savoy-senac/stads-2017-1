@@ -1,6 +1,6 @@
 function abrirPopup(){
-  var popup = document.querySelector(".popup");
-  popup.classList.toggle("aberta");
+  var body = document.body;
+  body.classList.toggle("aberta");
 }
 
 window.addEventListener("click",abrirPopup);

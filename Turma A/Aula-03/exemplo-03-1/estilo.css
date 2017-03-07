@@ -41,7 +41,7 @@ html,body{
   opacity: 0;
 }
 
-.popup.aberta{
+body.aberta .popup{
   animation: aparecer 1s forwards;
   top: 0%;
   opacity: 1;
