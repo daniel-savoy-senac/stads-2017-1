@@ -1,3 +1,15 @@
+@keyframes aparecer{
+  0%{
+    opacity: 0;
+    top: -100%;
+  }
+  100%{
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+
 html,body{
   padding: 0px; margin: 0px; height: 100%;
 }
@@ -9,11 +21,6 @@ html,body{
   background: hsla(200, 100%, 50%, 0.5);
 }
 
-
-
-
-
-
 .conteudo{
   width: 200px;
   height: 3000px;
@@ -24,13 +31,20 @@ html,body{
   width: 400px;
   height: 250px;
   position: fixed;
-  top: 0px;
+  top: -110%;
   right: 0px;
   bottom: 0px;
   left: 0px;
   margin: auto;
   background: hsla(200, 80%, 60%, 0.5);
   border: hsla(200, 80%, 40%, 0.5) 1px solid;
+  opacity: 0;
+}
+
+.popup.aberta{
+  animation: aparecer 1s forwards;
+  top: 0%;
+  opacity: 1;
 }
 
 .popup .fechar{
@@ -40,4 +54,25 @@ html,body{
   position: absolute;
   top: 3px;
   right: 3px;
+  text-align:center;
+  border: hsl(0,0%,100%) 1px solid;
+  box-shadow: hsl(200,100%,20%) -1px 1px 4px;
+  transition: .3s;
+  border-radius: 4px;
+}
+
+.popup .fechar:before{
+  content: "X";
+  color: hsla(0,100%,100%,1);
+  font-family: Verdana;
+}
+
+.popup .fechar:hover:before{
+  content: "-";
+}
+
+.popup .fechar:hover{
+  background: hsla(0,100%,10%,0.9);
+  box-shadow: hsl(200,100%,20%) 0px 0px 4px;
+  cursor: pointer;
 }
