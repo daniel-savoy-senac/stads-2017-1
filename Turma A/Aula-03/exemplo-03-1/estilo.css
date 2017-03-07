@@ -1,0 +1,36 @@
+html,body{
+  padding: 0px; margin: 0px; height: 100%;
+}
+
+.menu{
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  background: hsla(200, 100%, 50%, 0.5);
+}
+.conteudo{
+  width: 200px;
+  height: 3000px;
+  background: linear-gradient(hsla(120,100%,30%,0.5), hsla(120,100%,80%,0.5));
+}
+.popup{
+  width: 400px;
+  height: 250px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  background: hsla(200, 80%, 60%, 0.5);
+  border: hsla(200, 80%, 40%, 0.5) 1px solid;
+}
+.popup .fechar{
+  background: hsla(0,100%,50%,0.9);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
