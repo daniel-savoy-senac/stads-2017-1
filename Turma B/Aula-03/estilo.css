@@ -1,0 +1,7 @@
+body{
+  background: hsl(120, 100%, 50%);
+}
+
+body.ligado{
+  background: hsl(0, 100%, 50%);
+}
