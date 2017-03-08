@@ -13,14 +13,22 @@ body.ligado{
 }
 
 div{
-  width: 100%;
+  position:fixed;
+  left:0px;
+  right:0px;
   height: 50%;
   background: hsl(0,0%,100%);
 }
 
 body.ligado div{
   background: hsl(0,100%,50%);
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
   width: 400px;
   height: 400px;
+  margin: auto;
   border-radius: 50%;
 }
