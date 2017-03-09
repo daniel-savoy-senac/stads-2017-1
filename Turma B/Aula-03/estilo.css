@@ -4,31 +4,28 @@ html, body{
   margin: 0px;
 }
 
-body{
-  background: hsl(0, 100%, 50%);
+p{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  background: red;
 }
 
-body.ligado{
-  background: hsl(0, 100%, 100%);
+article{
+  position: static;
+  width: 100px;
+  height: 100px;
+  background: yellow;
 }
 
 div{
-  position:fixed;
-  left:0px;
-  right:0px;
-  height: 50%;
-  background: hsl(0,0%,100%);
-}
-
-body.ligado div{
-  background: hsl(0,100%,50%);
-  position: fixed;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  width: 400px;
-  height: 400px;
-  margin: auto;
-  border-radius: 50%;
+  position: relative;
+  width: 200px;
+  height: 2000px;
+  background: blue;
 }
