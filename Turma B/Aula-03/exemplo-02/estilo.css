@@ -1,0 +1,31 @@
+html, body{
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+p{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 0px;
+  width: 30px;
+  height: 30px;
+  background: hsla(0,100%,50%,0.5);
+}
+
+article{
+  position: static;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+
+div{
+  position: relative;
+  width: 200px;
+  height: 2000px;
+  background: blue;
+}

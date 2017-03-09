@@ -4,28 +4,49 @@ html, body{
   margin: 0px;
 }
 
-p{
-  position: absolute;
-  left: 0px;
+header{
+  background: hsla(180,100%,50%,0.7);
+  top: 0px;
+  left:0px;
   right: 0px;
-  bottom: 0px;
-  margin: auto;
-  padding: 0px;
-  width: 30px;
-  height: 30px;
-  background: hsla(0,100%,50%,0.5);
+  height: 50px;
+  position:fixed;
+}
+
+main{
+    background: hsl(120,100%,50%);
+    width: 300px;
+    height: 2000px;
 }
 
 article{
-  position: static;
-  width: 100px;
-  height: 100px;
-  background: yellow;
+  background: hsla(180,100%,50%,0.7);
+  position: fixed;
+  top: -200%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  transition: 1s;
+}
+
+body.ligado article{
+  top:0%;
+  bottom: 0%;
 }
 
 div{
-  position: relative;
-  width: 200px;
-  height: 2000px;
-  background: blue;
+  width: 15px;
+  height: 15px;
+  background: hsl(0,100%,40%);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+}
+
+div::before{
+  content: "X";
 }
