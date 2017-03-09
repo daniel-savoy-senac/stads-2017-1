@@ -13,7 +13,7 @@ p{
   padding: 0px;
   width: 30px;
   height: 30px;
-  background: red;
+  background: hsla(0,100%,50%,0.5);
 }
 
 article{
