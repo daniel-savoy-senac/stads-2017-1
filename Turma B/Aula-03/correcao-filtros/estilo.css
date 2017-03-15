@@ -1,0 +1,17 @@
+article{
+  width: 150px;
+  height: 200px;
+  background: hsla(200,100%,70%,1);
+  margin: 5px;
+  display:none;
+}
+
+body.a article.a,
+body.b article.b,
+body.c article.c,
+body.d article.d,
+body.e article.e,
+body.f article.f,
+body.g article.g{
+  display: inline-block;
+}
