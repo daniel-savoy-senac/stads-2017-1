@@ -6,6 +6,17 @@ function Pessoa(n,s,i){
   this.crescer = function(){
     return ++this.idade;
   }
+  this.imprimir = function(){
+    var x = document.createElement("article");
+    x.classList.add("pessoa");
+    x.textContent = this.nome;
+    x.textContent += " " + this.sobrenome;
+    x.textContent += " - " + this.idade +" anos";
+    x.textContent += ", filhos: " + this.filhos.length;
+    document.body.appendChild(x);
+  }
+
+  this.imprimir();
 }
 
 var joao = new Pessoa("João", "Patati", 98);
@@ -23,10 +34,13 @@ maria.filhos.push(chico);
 
 console.log(joao);
 
-function imprimir(){
+function imprimir(p){
   //nome, sobrenome, idade, qtdade de filhos
   var x = document.createElement("article");
   x.classList.add("pessoa");
-  x.textContent = "Silvia Silva";
+  x.textContent = p.nome;
+  x.textContent += " " + p.sobrenome;
+  x.textContent += " - " + p.idade +" anos";
+  x.textContent += ", filhos: " + p.filhos.length;
   document.body.appendChild(x);
 }
