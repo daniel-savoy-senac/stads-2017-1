@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Formulários</title>
+    <meta charset="utf-8"/>
+    <style>
+      p{
+          font-size: 30px;
+      }
+      span{
+        display: inline-block;
+        margin-left: 10px;
+        color: red
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var queryString = window.location.search;
+      var parametros = new URLSearchParams(queryString);
+      for(var i of parametros){
+        var p = document.createElement("p");
+        var span = document.createElement("span");
+        span.textContent = i[1];
+        p.textContent = i[0];
+        p.appendChild(span);
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>
