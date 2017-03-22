@@ -5,12 +5,24 @@
     <meta charset="utf-8"/>
   </head>
   <body>
-    <form action="https://busca.uol.com.br/result.html">
+    <form action="destino.html">
       <!--
         <input type="text" name="term"/>
         <textarea name="term">texto</textarea>
+
+        <input type="checkbox" name="term" id="masc" value="M"/>
+        <label for="masc">Masculino</label>
+        <input type="checkbox" name="term" id="fem" value="F"/>
+        <label for="fem">Feminino</label>
+
       -->
-      <input type="radio" name="term"/>
+
+      <select name="term">
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+      </select>
+
+      <input type="color" name="tinta"/>
 
       <button type="submit">Enviar</button>
     </form>
