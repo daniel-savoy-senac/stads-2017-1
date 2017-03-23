@@ -1,0 +1,7 @@
+div#testeCor{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  background: url("camiseta.png") no-repeat center center;
+  background-size: cover;
+}

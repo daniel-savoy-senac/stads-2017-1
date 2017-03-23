@@ -5,8 +5,9 @@ function iniciar(){
 
 function mudarCor(){
   var tinta = document.querySelector("#tinta");
+  var teste = document.querySelector("#testeCor");
   var cor = tinta.value;
-  console.log(cor);
+  teste.style.backgroundColor = cor;
 }
 
 window.addEventListener("load",iniciar);
