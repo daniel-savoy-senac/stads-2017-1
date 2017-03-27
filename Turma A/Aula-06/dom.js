@@ -12,10 +12,14 @@ function iniciar(){
   //var btn = document.querySelectorAll("button")[0];
 
   var btn = document.querySelector("button");
+  btn.addEventListener("click", validar);
+
 }
 
 function validar(){
   //Imprimir o valor do campo
+
+  alert("OK")
 }
 
 
