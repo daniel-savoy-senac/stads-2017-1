@@ -18,8 +18,11 @@ function iniciar(){
 
 function validar(){
   //Imprimir o valor do campo
-
-  alert("OK")
+  var campo = document.querySelector("input");
+  // ATTRIBUTE != PROPERTY
+  var valor = campo.getAttribute("value");
+  var atual = campo.value;
+  console.log(atual);
 }
 
 
