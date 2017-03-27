@@ -29,6 +29,8 @@ function validar(){
   //atual[0]
   //atual.length
 
+  //Date.parse(string) ==> tenta parsear a data
+
   // Setar Attribute só funciona com valor default
   //campo.setAttribute("value","2017-03-27");
   campo.value = "2017-03-27";
