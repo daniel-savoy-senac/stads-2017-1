@@ -8,9 +8,10 @@ function iniciar(){
     document.getElementsByTagName => Seleciona vários pelo tipo da tag
   */
 
-  var btn = document.getElementsByTagName("button")[0];
+  //var btn = document.getElementsByTagName("button")[0];
+  //var btn = document.querySelectorAll("button")[0];
+
   var btn = document.querySelector("button");
-  var btn = document.querySelectorAll("button")[0];
 }
 
 function validar(){
