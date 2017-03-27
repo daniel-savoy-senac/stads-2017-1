@@ -24,6 +24,11 @@ function validar(){
   var valor = campo.getAttribute("value");
   var atual = campo.value;
 
+  //atual.split
+  //atual.match
+  //atual[0]
+  //atual.length
+
   // Setar Attribute só funciona com valor default
   //campo.setAttribute("value","2017-03-27");
   campo.value = "2017-03-27";
