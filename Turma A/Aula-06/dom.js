@@ -19,9 +19,15 @@ function iniciar(){
 function validar(){
   //Imprimir o valor do campo
   var campo = document.querySelector("input");
+
   // ATTRIBUTE != PROPERTY
   var valor = campo.getAttribute("value");
   var atual = campo.value;
+
+  // Setar Attribute só funciona com valor default
+  //campo.setAttribute("value","2017-03-27");
+  campo.value = "2017-03-27";
+
   console.log(atual);
 }
 
