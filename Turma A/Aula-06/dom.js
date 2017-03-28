@@ -1,11 +1,24 @@
 function iniciar(){
-  //Ver se o botão foi clicado
-  /*
+    /*
+    COMANDOS SELETORES
     document.querySelector => Seleciona 1 usando CSS selector
     document.querySelectorAll => Seleciona vários
     document.getElementById => Seleciona 1 pelo ID
     document.getElementsByClassName => Seleciona vários por 1 classe
     document.getElementsByTagName => Seleciona vários pelo tipo da tag
+  */
+
+
+  /*
+    COMANDOS DE FILHOS
+    pai.appendChild(filho) == adiciona um filho ao pai
+    pai.removeChild(filho) == remove um filho do pai
+    pai.children == lista de filhos
+    filho.parentNode == pai
+
+    Assim, para remover um elemento...
+    filho.parentNode.removeChild(filho)
+        
   */
 
   //var btn = document.getElementsByTagName("button")[0];
