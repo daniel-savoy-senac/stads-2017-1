@@ -8,6 +8,17 @@ function iniciar(){
     document.getElementsByTagName => Seleciona vários pelo tipo da tag
   */
 
+  /*
+    COMANDOS DE EDIÇÃO DE ELEMENTOS
+    elemento.setAttribute("attr",valor) == muda valor do attributo
+    elemento.propriedade = valor;   == muda valor da propriedade
+
+    elemento.style["estilo"] = valor; == muda estilo
+
+    elemento.style["background"] = "red";
+    
+  */
+
 
   /*
     COMANDOS DE FILHOS
@@ -18,7 +29,7 @@ function iniciar(){
 
     Assim, para remover um elemento...
     filho.parentNode.removeChild(filho)
-        
+
   */
 
   //var btn = document.getElementsByTagName("button")[0];
