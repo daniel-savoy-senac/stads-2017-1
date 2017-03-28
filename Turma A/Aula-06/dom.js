@@ -37,7 +37,7 @@ function validar(){
     // Criar um LI usando document.createElement
     // LI textContent = atual
     // Achar a LISTA
-    // Adicionar na LISTA
+    // Adicionar na LISTA usando lista.appendChild
   }else{
     campo.value = "2017-03-27";
   }
