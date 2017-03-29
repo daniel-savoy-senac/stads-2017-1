@@ -15,7 +15,10 @@ function main(){
 }
 
 function ativar(){
-  console.log("ATIVADO!!!");
+  var paragrafo = document.querySelector("p.ativo");
+  var campo = document.querySelector("input[name=texto]");
+  var texto = campo.value;
+  paragrafo.innerHTML += "<br/>"+texto;
 }
 
 window.addEventListener("load",main);
