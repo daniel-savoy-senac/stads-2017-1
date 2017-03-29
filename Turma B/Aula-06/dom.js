@@ -10,7 +10,12 @@
   //$x("X-PATH");
 
 function main(){
+  var btn = document.querySelector("button#btn");
+  btn.addEventListener("click",ativar);
+}
 
+function ativar(){
+  console.log("ATIVADO!!!");
 }
 
 window.addEventListener("load",main);
