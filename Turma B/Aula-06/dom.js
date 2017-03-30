@@ -24,14 +24,29 @@
 
 function main(){
   var btn = document.querySelector("button#btn");
-  btn.addEventListener("click",ativar);
+  btn.addEventListener("click",adicionar);
 }
 
+function adicionar(){
+
+}
+
+function validar(texto){
+  var valido = false;
+  //[TODO] => Validar se o texto é uma data;
+  // EXPRESSAO REGULAR texto.match(/\d\d\d\d-\d\d-\d\d/)
+  // INSTANCIAR DATA Date.parse(texto);
+  // texto[0]
+  // texto.split("CARACTER DE SEPARACAO")
+  return valido;
+}
+
+window.addEventListener("load",main);
+/*
 function ativar(){
   var paragrafo = document.querySelector("p.ativo");
   var campo = document.querySelector("input[name=texto]");
   var texto = campo.value;
   paragrafo.innerHTML += "<br/>"+texto;
 }
-
-window.addEventListener("load",main);
+*/
