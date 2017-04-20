@@ -32,5 +32,8 @@ print("TODOS maiores que -1?:"+valores.every(n=>n>-1));
   JOIN - transforma o vetor em uma string (inverso é SPLIT)
   EVERY - se todo o vetor cumpre uma condição
   SOME - se alguém cumpre uma condição
+  FILTER - retorna um vetor com apenas os valores que cumpram a condição
+  SORT - orderna o vetor de acordo com a função
+  REVERSE - retorna o vetor na ordem reversa
 
 */
