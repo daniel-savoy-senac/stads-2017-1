@@ -1,0 +1,20 @@
+label::after{
+  content: ": ";
+}
+
+label{
+  display: inline-block;
+  width: 100px;
+}
+
+.campo{
+  padding: 20px;
+}
+
+.campo:nth-of-type(odd){
+  background: hsl(0,0%,80%);
+}
+
+button{
+  margin-top: 20px;
+}

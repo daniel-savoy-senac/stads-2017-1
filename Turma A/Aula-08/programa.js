@@ -9,7 +9,10 @@ let iniciar = (e) => {
 
 let imprimir = () => {
   let obj = JSON.parse(xhr.response);
-  console.log(obj.idade);
+  for(let prop in obj){
+    let campo = document.querySelector(`#${prop}`);
+    campo.value = obj[prop];
+  }
 }
 
 window.addEventListener("load", iniciar);
