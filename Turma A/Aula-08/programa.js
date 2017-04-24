@@ -1,13 +1,15 @@
+var xhr = new XMLHttpRequest();
+
 let iniciar = (e) => {
   // Requisicao por XHR
-  let xhr = new XMLHttpRequest();
   xhr.open("get", "dados.json");
   xhr.addEventListener("load",imprimir);
   xhr.send();
 }
 
-let imprimir = (e) => {
-  console.log(e);
+let imprimir = () => {
+  let obj = JSON.parse(xhr.response);
+  console.log(obj.idade);
 }
 
 window.addEventListener("load", iniciar);
