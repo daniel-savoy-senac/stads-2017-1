@@ -1,6 +1,14 @@
-{
-  "idade" : 36,
-  "nome" : "Daniel",
-  "profissao" : "Professor",
-  "instituicao" : "Senac - Santo Amaro"
-}
+[
+  {
+    "idade" : 36,
+    "nome" : "Daniel",
+    "profissao" : "Professor",
+    "instituicao" : "Senac - Santo Amaro"
+  },
+  {
+    "idade" : 20,
+    "nome" : "João",
+    "profissao" : "Diretor",
+    "instituicao" : "SESC Paulista"
+  }
+]
