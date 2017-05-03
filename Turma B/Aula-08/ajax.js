@@ -6,7 +6,7 @@ function main(){
 }
 
 function imprimir(evt){
-  console.log(evt);
+  console.log(evt.target.responseText);
 }
 
 window.addEventListener("load",main);
