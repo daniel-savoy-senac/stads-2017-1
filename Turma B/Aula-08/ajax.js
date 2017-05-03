@@ -6,7 +6,8 @@ function main(){
 }
 
 function imprimir(evt){
-  console.log(evt.target.responseText);
+  let obj = JSON.parse(evt.target.responseText);
+  console.log(obj);
 }
 
 window.addEventListener("load",main);

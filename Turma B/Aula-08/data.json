@@ -1,4 +1,10 @@
-{
-  "nome" : "Daniel Savoy",
-  "idade" : 36
-}
+[
+    {
+    "nome" : "Daniel Savoy",
+    "idade" : 36
+  },
+  {
+    "nome" : "Maria Silva",
+    "idade" : 84
+  }
+]
