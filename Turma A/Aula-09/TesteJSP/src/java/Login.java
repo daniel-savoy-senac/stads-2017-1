@@ -6,7 +6,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class DizerOla extends HttpServlet {
+public class Login extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,31 +29,12 @@ public class DizerOla extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        ArrayList<Mensagem> msgs = (ArrayList) request.getServletContext().getAttribute("msgs");
-        
-        if(msgs == null){
-            msgs = new ArrayList<Mensagem>();
-            request.getServletContext().setAttribute("msgs", msgs);
+        String username = request.getParameter("username");
+        if(username != null && username.length() > 1){
+            request.getSession().setAttribute("username", username);
         }
         
-        String text = request.getParameter("msg");
-        String username = (String) request.getSession().getAttribute("username");   
-        Mensagem msg = new Mensagem(text , username);
-        
-        if(msg.getText() != null && msg.getText().length() > 1){
-            /* APENAS NA REQUEST */
-            //request.setAttribute("msg3", msg);
-            
-            /* TODA A SESSÃO (USUÁRIO LOGADO) */
-            //request.getSession().setAttribute("msg2", msg);
-            
-            /* TODA A APLICAÇÃO (TODOS OS USUÁRIOS) */
-            msgs.add(msg);
-        }
-        
-        request.getRequestDispatcher("/WEB-INF/novo-msg.jspx")
-               .forward(request,response);
-        
+        response.sendRedirect("DizerOla");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

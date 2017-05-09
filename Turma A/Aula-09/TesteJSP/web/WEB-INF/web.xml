@@ -4,9 +4,17 @@
         <servlet-name>DizerOla</servlet-name>
         <servlet-class>DizerOla</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DizerOla</servlet-name>
         <url-pattern>/DizerOla</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
