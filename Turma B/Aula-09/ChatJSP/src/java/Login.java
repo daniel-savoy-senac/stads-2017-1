@@ -6,6 +6,8 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +30,9 @@ public class Login extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        Date date = new Date();
+        request.setAttribute("agora", date);
         
         request.getRequestDispatcher("WEB-INF/login.jsp")
                .forward(request, response);
