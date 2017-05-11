@@ -6,8 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class Login extends HttpServlet {
+public class Conversar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,11 +30,22 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Date date = new Date();
-        request.setAttribute("agora", date);
+        ArrayList<String> conversa = (ArrayList) request.getServletContext().getAttribute("conversa");
         
-        request.getRequestDispatcher("WEB-INF/login.jspx")
-               .forward(request, response);
+        if(conversa == null){
+           conversa = new ArrayList<String>();
+           request.getServletContext().setAttribute("conversa", conversa);
+        }
+        
+        String msg = request.getParameter("msg");
+        
+        if(msg != null && msg.length()>=1){
+            String username = (String) request.getSession().getAttribute("username");
+            String text = username + " disse " + msg;
+            conversa.add(text);
+        }
+        
+        request.getRequestDispatcher("WEB-INF/chat.jspx").forward(request, response);
         
     }
 

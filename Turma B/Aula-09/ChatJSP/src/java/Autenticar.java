@@ -6,8 +6,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Calendar;
-import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class Login extends HttpServlet {
+public class Autenticar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,11 +29,12 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Date date = new Date();
-        request.setAttribute("agora", date);
+        String username = request.getParameter("username");
         
-        request.getRequestDispatcher("WEB-INF/login.jspx")
-               .forward(request, response);
+        request.getSession().setAttribute("username", username);
+        
+        request.getRequestDispatcher("WEB-INF/chat.jspx").forward(request, response);
+        
         
     }
 
@@ -51,7 +50,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
     }
 
     /**

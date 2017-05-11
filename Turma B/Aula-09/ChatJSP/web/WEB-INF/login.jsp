@@ -18,7 +18,7 @@
                 <c:when test="${agora.hours > 5}">Boa Manhã!</c:when>
                 <c:otherwise>Vai dormir!!!</c:otherwise>
             </c:choose>
-        </h1>
+        <h1>
         <form action="/Autenticar" method="post">
             <label for="username">Seu Apelido</label>
             <input name="username" id="username" type="text"/>
