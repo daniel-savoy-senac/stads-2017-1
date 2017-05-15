@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
 
     <jsp:directive.page pageEncoding="utf-8" contentType="text/html" />
     
@@ -9,7 +10,20 @@
            <meta charset="utf-8"/>
        </head>
        <body>
-           <h1>Agora são ${agora.hours} horas</h1>
+           <h1>
+               <c:choose>
+                   <c:when test="${agora.hours > 18}">Boa Noite!</c:when>
+                   <c:when test="${agora.hours > 13}">Boa Tarde!</c:when>
+                   <c:when test="${agora.hours > 6}">Bom Dia!</c:when>
+                   <c:otherwise>Vai dormir!!!</c:otherwise>
+               </c:choose>
+           </h1>
+           <form action="Autenticar" method="post">
+               <label for="username">Apelido</label>
+               <input type="text" name="username" id="username"/>
+               <input type="text" name="imageUrl" placeholder="URL do seu icone"/>
+               <button type="submit">OK</button>
+           </form>
        </body>
    </html>
 
