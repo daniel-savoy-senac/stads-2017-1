@@ -19,6 +19,9 @@
             <label for="msg">Mensagem:</label>
             <input type="text" name="msg" id="msg"/>
             </form>
+            <form method="post" action="DizerOla">
+                <button type="button">Atualizar</button>
+            </form>
             <div>
                 <c:forEach items="${msgs}" var="msg">
                     <p>${msg.user} : ${msg.text}</p>
