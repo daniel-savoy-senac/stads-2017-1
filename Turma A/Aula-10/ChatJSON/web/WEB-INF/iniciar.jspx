@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+   <html>
+       <head>
+           <title>Bem vindo!</title>
+           <meta charset="utf-8"/>
+       </head>
+       <body>
+           <h1>
+               
+               
+           </h1>
+       </body>
+   </html>
+
+</jsp:root>
