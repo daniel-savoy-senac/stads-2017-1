@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+          xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+
+    <jsp:directive.page pageEncoding="utf-8" contentType="text/html" />
+    
+   <html>
+       <head>
+           <title>Bem vindo!</title>
+           <meta charset="utf-8"/>
+           <script src="js/chat.js" type="text/javascript">/**/</script>
+       </head>
+       <body>
+           <h1>Bem-vindo <span>${eu.username}</span></h1>
+           <div class="usuarios"></div>
+       </body>
+   </html>
+
+</jsp:root>

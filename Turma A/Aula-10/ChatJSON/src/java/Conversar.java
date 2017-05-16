@@ -6,7 +6,6 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class Autenticar extends HttpServlet {
+public class Conversar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,26 +28,8 @@ public class Autenticar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String username = request.getParameter("username");
-        String imageUrl = request.getParameter("imageUrl");
-        
-        if(username != null && username.length() > 2){
-            Usuario usuario = new Usuario(username, imageUrl);
-            request.getSession().setAttribute("eu", usuario);
-            ArrayList<Usuario> logados = (ArrayList) request
-                    .getServletContext().getAttribute("logados");
-            if(logados == null){
-                logados = new ArrayList<Usuario>();
-                request.getServletContext().setAttribute("logados", logados);
-            }
-            logados.add(usuario);
-        }
-        
-        response.sendRedirect("Conversar");
-        
-        /*request.getRequestDispatcher("/WEB-INF/chat.jspx")
-                .forward(request, response);*/
+       request.getRequestDispatcher("/WEB-INF/chat.jspx")
+                .forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

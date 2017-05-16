@@ -1,10 +1,19 @@
 public class Usuario {
 
-    protected String username;
+    protected String username = "";
     
-    protected String imageUrl;
+    protected String imageUrl = "";
     
-    protected String status;
+    protected String status = "";
+    
+    public String getJson(){
+       String json = "{";
+       json += "\"username\":\""+this.username+"\", ";
+       json += "\"imageUrl\":\""+this.imageUrl+"\", ";
+       json += "\"status\":\""+this.status+"\"";
+       json += "}";
+       return json;
+    }
     
     public Usuario(String username, String imageUrl){
         this.username = username;

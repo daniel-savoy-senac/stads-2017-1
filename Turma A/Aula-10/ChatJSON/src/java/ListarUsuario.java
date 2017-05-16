@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class Autenticar extends HttpServlet {
+public class ListarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,26 +29,22 @@ public class Autenticar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String username = request.getParameter("username");
-        String imageUrl = request.getParameter("imageUrl");
-        
-        if(username != null && username.length() > 2){
-            Usuario usuario = new Usuario(username, imageUrl);
-            request.getSession().setAttribute("eu", usuario);
+        response.setContentType("text/json;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             ArrayList<Usuario> logados = (ArrayList) request
-                    .getServletContext().getAttribute("logados");
-            if(logados == null){
-                logados = new ArrayList<Usuario>();
-                request.getServletContext().setAttribute("logados", logados);
-            }
-            logados.add(usuario);
+                        .getServletContext()
+                        .getAttribute("logados");
+            
+            out.print("[");
+            for(int i = 0; i < logados.size(); i++){
+                out.print(logados.get(i).getJson());
+                if(i < logados.size()-1){ 
+                    out.print(",");
+                }
+            }            
+            out.print("]");
         }
-        
-        response.sendRedirect("Conversar");
-        
-        /*request.getRequestDispatcher("/WEB-INF/chat.jspx")
-                .forward(request, response);*/
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

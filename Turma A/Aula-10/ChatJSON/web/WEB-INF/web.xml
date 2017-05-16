@@ -8,6 +8,14 @@
         <servlet-name>Autenticar</servlet-name>
         <servlet-class>Autenticar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListarUsuario</servlet-name>
+        <servlet-class>ListarUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Conversar</servlet-name>
+        <servlet-class>Conversar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Iniciar</servlet-name>
         <url-pattern>/Iniciar</url-pattern>
@@ -16,6 +24,14 @@
     <servlet-mapping>
         <servlet-name>Autenticar</servlet-name>
         <url-pattern>/Autenticar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarUsuario</servlet-name>
+        <url-pattern>/ListarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Conversar</servlet-name>
+        <url-pattern>/Conversar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
