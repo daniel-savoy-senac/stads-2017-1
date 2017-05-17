@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -59,7 +60,7 @@ public class Autenticar extends HttpServlet {
         response.setContentType("text/json;charset=UTF-8");
         
         try (PrintWriter out = response.getWriter()) {
-            
+            /*
             String text = "{";
             if(eu != null){
                 text += "\"username\":";
@@ -71,9 +72,16 @@ public class Autenticar extends HttpServlet {
             }
             text += "\"response\":";
             text += flag ? "true" : "false";
-            text += "}";
+            text += "}";*/
             
-            out.println(text);
+            JSONObject json = new JSONObject();
+            json.put("response", flag);
+            if(eu != null){
+                json.put("username", eu.username);
+                json.put("status", eu.status);
+                json.put("image", eu.image);
+            }
+            out.println(json.toString());
         }
         
     }
