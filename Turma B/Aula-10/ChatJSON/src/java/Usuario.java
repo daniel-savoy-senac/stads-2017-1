@@ -2,9 +2,9 @@ public class Usuario {
     
     protected String username;
     
-    protected String status;
+    protected String status = "";
     
-    protected String image;
+    protected String image = "";
 
     public String getUsername() {
         return username;

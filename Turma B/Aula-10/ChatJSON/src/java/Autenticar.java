@@ -45,8 +45,8 @@ public class Autenticar extends HttpServlet {
         
         if(username != null && username.length() > 3 && eu == null){
             eu = new Usuario(username);
-            eu.setStatus(status);
-            eu.setImage(image);
+            if(status != null) eu.setStatus(status);
+            if(image != null) eu.setImage(image);
             
             request.getSession().setAttribute("eu", eu);
             
