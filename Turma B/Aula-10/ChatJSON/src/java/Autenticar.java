@@ -61,12 +61,14 @@ public class Autenticar extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             String text = "{";
-            text += "\"username\":";
-            text += "\""+eu.username+"\",";
-            text += "\"status\":";
-            text += "\""+eu.status+"\",";
-            text += "\"image\":";
-            text += "\""+eu.image+"\",";
+            if(eu != null){
+                text += "\"username\":";
+                text += "\""+eu.username+"\",";
+                text += "\"status\":";
+                text += "\""+eu.status+"\",";
+                text += "\"image\":";
+                text += "\""+eu.image+"\",";
+            }
             text += "\"response\":";
             text += flag ? "true" : "false";
             text += "}";
