@@ -60,20 +60,7 @@ public class Autenticar extends HttpServlet {
         response.setContentType("text/json;charset=UTF-8");
         
         try (PrintWriter out = response.getWriter()) {
-            /*
-            String text = "{";
-            if(eu != null){
-                text += "\"username\":";
-                text += "\""+eu.username+"\",";
-                text += "\"status\":";
-                text += "\""+eu.status+"\",";
-                text += "\"image\":";
-                text += "\""+eu.image+"\",";
-            }
-            text += "\"response\":";
-            text += flag ? "true" : "false";
-            text += "}";*/
-            
+                     
             JSONObject json = new JSONObject();
             json.put("response", flag);
             if(eu != null){
