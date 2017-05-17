@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,19 +29,51 @@ public class Autenticar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Autenticar</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Autenticar at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        
+        String username = request.getParameter("username");
+        String status = request.getParameter("status");
+        String image = request.getParameter("image");
+        Usuario eu = (Usuario) request.getSession().getAttribute("eu");
+        ArrayList<Usuario> lista = (ArrayList) request.getServletContext().getAttribute("lista");
+        
+        if(lista == null){ 
+            lista = new ArrayList<Usuario>();
+            request.getServletContext().setAttribute("lista", lista);
         }
+        
+        boolean flag = false;
+        
+        if(username != null && username.length() > 3 && eu == null){
+            eu = new Usuario(username);
+            eu.setStatus(status);
+            eu.setImage(image);
+            
+            request.getSession().setAttribute("eu", eu);
+            
+            /* TODO: Verificar usernames duplicados */
+            lista.add(eu);
+            flag = true;         
+        }
+        
+               
+        response.setContentType("text/json;charset=UTF-8");
+        
+        try (PrintWriter out = response.getWriter()) {
+            
+            String text = "{";
+            text += "\"username\":";
+            text += "\""+eu.username+"\",";
+            text += "\"status\":";
+            text += "\""+eu.status+"\",";
+            text += "\"image\":";
+            text += "\""+eu.image+"\",";
+            text += "\"response\":";
+            text += flag ? "true" : "false";
+            text += "}";
+            
+            out.println(text);
+        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
