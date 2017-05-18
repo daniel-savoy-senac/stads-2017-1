@@ -7,18 +7,18 @@ function submit(){
     let form = document.querySelector("form#loginForm");
     let data = FormData2Str(new FormData(form));
     let param = {
-        body:data,
+        body: data,
         credentials: "same-origin",
         method: "POST",
         headers: {
              "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
          }
     };
-    
+
     fetch("Autenticar",param)
             .then(r => r.json())
             .then(json => console.log(json));
-       
+
 }
 
 function FormData2Str(fd){
