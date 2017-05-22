@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author daniel.psavoy
  */
-public class Cadastrar extends HttpServlet {
+public class CadastrarJSON extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,20 +29,21 @@ public class Cadastrar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String destino = "/WEB-INF/ok.jspx";
+        String destino = "OK";
         
         try{
             String nome = request.getParameter("nome");
             int idade = Integer.parseInt(request.getParameter("idade"));
             float peso = Float.parseFloat(request.getParameter("peso"));
         } catch(Exception e){
-            request.setAttribute("error", "Deu Ruim!!!");
-            destino = "/WEB-INF/formJSP.jspx";
+            destino = "Deu Ruim!!!";
         }
         
-        request.getRequestDispatcher(destino).forward(request, response);
+        response.setContentType("text/html;charset=UTF-8");
         
-        
+        try (PrintWriter out = response.getWriter()) {
+            out.println(destino);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

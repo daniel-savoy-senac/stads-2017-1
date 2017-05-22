@@ -4,9 +4,26 @@
         <servlet-name>Cadastrar</servlet-name>
         <servlet-class>Cadastrar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Iniciar</servlet-name>
+        <servlet-class>Iniciar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CadastrarJSON</servlet-name>
+        <servlet-class>CadastrarJSON</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Cadastrar</servlet-name>
         <url-pattern>/Cadastrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Iniciar</servlet-name>
+        <url-pattern>/Iniciar</url-pattern>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastrarJSON</servlet-name>
+        <url-pattern>/CadastrarJSON</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

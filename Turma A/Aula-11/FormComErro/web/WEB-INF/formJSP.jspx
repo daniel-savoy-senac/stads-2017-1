@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-    Document   : formJSP
-    Created on : 22/05/2017, 19:37:54
-    Author     : daniel.psavoy
--->
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
 
     <jsp:directive.page contentType="text/html" pageEncoding="UTF-8"/>
 
-    <!-- any content can be specified here, e.g.: -->
-    <jsp:element name="text">
-        <jsp:attribute name="lang">EN</jsp:attribute>
-        <jsp:body>Hello World!</jsp:body>
-    </jsp:element>
+    <html>
+        <head>
+            <title>Formulario com Erro</title>
+            <meta charset="utf-8"/>
+            <script src="formErro.js" type="text/javascript">/*SCRIPT*/</script>
+        </head>
+        <body>
+            <div class="erro"><!-- ERROR -->${error}</div>
+            <form action="Cadastrar" method="GET">
+                <input placeholder="Nome" name="nome" value="${param.nome}" />
+                <input placeholder="Idade" name="idade" value="${param.idade}" />
+                <input placeholder="Peso" name="peso" value="${param.peso}" />
+                <button type="submit">OK</button>
+                <button type="button" id="jsonBtn">JSON</button>
+            </form>
+        </body>
+    </html>
 
 </jsp:root>
