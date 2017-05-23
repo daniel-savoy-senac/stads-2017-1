@@ -14,7 +14,17 @@ function submeter(){
 }
 
 function retornar(evt){
-    console.log(evt.target.responseText);
+    let obj = JSON.parse(evt.target.responseText);
+    if(obj.nome){
+        for(let i in obj){
+            document.getElementsByName(i)[0].value = obj[i];
+        }
+    }else{
+    obj.doidera.forEach(d => {
+        let e = document.createElement("div");
+        e.textContent = d;
+        document.body.appendChild(e);
+    });}
 }
 
 window.addEventListener("load",iniciar);

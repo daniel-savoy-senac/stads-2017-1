@@ -6,10 +6,13 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 
 /**
  *
@@ -35,8 +38,25 @@ public class CadastrarJSON extends HttpServlet {
             String nome = request.getParameter("nome");
             int idade = Integer.parseInt(request.getParameter("idade"));
             float peso = Float.parseFloat(request.getParameter("peso"));
+            peso++;
+            Paciente paciente = new Paciente(nome, peso, idade);
+            destino = paciente.toJSON().toJSONString();
         } catch(Exception e){
-            destino = "Deu Ruim!!!";
+            
+            ArrayList<String> teste = new ArrayList<String>();
+            teste.add("xxxxx");
+            teste.add("dfas");
+            teste.add("nonon");
+            
+            JSONArray ja = new JSONArray();
+            ja.addAll(teste);
+            
+            JSONObject json = new JSONObject();
+            json.put("erro", "Deu Ruim!!!");
+            json.put("idade", "Nada a ver");
+            json.put("peso", "Muito GORDO...");
+            json.put("doidera", ja);
+            destino = json.toJSONString();
         }
         
         response.setContentType("text/html;charset=UTF-8");
