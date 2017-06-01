@@ -24,4 +24,5 @@ function limpar(){
   }
 }
 
+
 window.addEventListener("load", iniciar);
